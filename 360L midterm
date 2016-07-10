@@ -1,5 +1,5 @@
 //
-//  midterm.cpp
+//  360L midterm.cpp
 //  Xcode c++
 //
 //  Created by Naisi Zhen on 7/8/16.
@@ -8,6 +8,47 @@
 
 #include <iostream>
 using namespace std;
+class Score
+{
+public:
+    int average(int a, int b)
+    {
+        return (a+b)/2;
+    }
+    void check(int score)
+    {
+        string grade=0;
+        if(score>100||score<0)
+        {
+            grade= "Error";
+        }
+        else if(score<=100 && score >=98)
+        {    grade = "A+";
+        }
+        else if(score>=93)
+        {    grade="A";
+        }
+        else if(score>=90)
+        {    grade="A-";
+        }
+        else if (score>=80)
+        {
+            grade="B";
+            
+        }
+        else if (score>=70)
+        {    grade="C";
+        }
+        else if (score>=60)
+        {    grade="D";
+        }
+        else
+        {
+            grade="F";
+        }
+        cout<<grade<<endl;
+    }
+};
 
 class Array
 {
@@ -37,7 +78,19 @@ int main()
 {
     cout<<"8950.Naisi Zhen"<<endl;
     
-    Array m;
+    Score q1;
+    int math,eng;
+    cout<<"Enter your Math score: "<<endl;
+    cin>>math;
+    cout<<"Enter you English score: \n";
+    cin>>eng;
+    cout<<endl;
+    int avg;
+    avg=q1.average(math, eng);
+    cout<<avg;
+    q1.check(avg);
+    
+    /*Array m;
     const int size=15;
     int a[size];
     cout<< "enter numbers to initialize array"<<endl;
@@ -54,6 +107,6 @@ int main()
     m.display(a);
     
     cout<< "Average is "<<m.average(a,size)<<endl;
-    
+    */
     return 0;
 }
