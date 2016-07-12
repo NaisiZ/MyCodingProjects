@@ -11,7 +11,7 @@ int main()
 	{
 		cout<<"Error";
 	} 
-	if (ss>=90){
+	else if (ss>=90){
 		cout<<"Student has scored A grade";
 	}
 	else if (ss>=80){
