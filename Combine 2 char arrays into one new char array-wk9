@@ -1,0 +1,39 @@
+//  360 wk9.cpp
+//  Write a program that asks for the user’s first, middle, and last names. The names should be stored in three different character arrays.
+
+/*Pass the three arrays to a public function, arrange( ), that defines the fourth array. The function should arrange the name in the following manner: the last name followed by a comma and a space, followed by the first name and a space, followed by the middle name.
+ 
+ For example, if the user entered “John Sai Patel”, it should store “Patel, John Sai” in the fourth array.
+ 
+ Display the contents of the fourth array on the screen.
+ */
+//  Created by Naisi Zhen on 7/8/16.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class MyClass9
+{
+public:
+    void arrange(char fname[], char mname[], char lname[])
+    {
+        cout<<fname<<", "<<mname<<" "<<lname;
+    }
+};
+
+int main()
+{
+    char f[20],m[20],l[20];
+    cout<<"Please enter your fisrt name: \n";
+    cin.getline(f,10,'\n');
+    cout<<"Please enter your millde name: \n";
+    cin.getline(m,10,'\n');
+    cout<<"Please enter your last name: \n";
+    cin.getline(l,10,'\n');
+    
+    MyClass9 q1;
+    q1.arrange(l,f,m);
+    cout<<endl;
+    return 0;
+}
