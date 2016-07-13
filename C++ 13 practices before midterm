@@ -58,6 +58,10 @@ int main()
     cin>>days;
     q1.daysToMonth(days);
     
+    cout<<endl;
+    
+    MyPractice q2;
+    q2.printOdd();
     return 0;
 }
 
