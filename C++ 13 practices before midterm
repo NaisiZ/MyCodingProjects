@@ -36,7 +36,7 @@ Output: 69 days = 2 Month and 9 days
         cin>>n;
         cout<<"Please enter the number that you want to start with:";
         cin>>s;
-        if(s%2==0)//if a is even number
+        if(s%2==0)//if s is even number
         {
             for (int i=s+1;i<s+2*n;i+=2)
             {
