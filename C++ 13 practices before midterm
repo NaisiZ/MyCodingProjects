@@ -1,1 +1,39 @@
+//
+//  main.cpp
+//  C++ 13 practice
+//
+//  Created by Naisi Zhen on 7/12/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class MyPractice
+{
+public:
+/*    1. Write a program to convert given no. of days into months and days. (Assume that each month is of 30 days)
+    Example :
+Input: 69
+Output: 69 days = 2 Month and 9 days
+*/
+    void daysToMonth(int days)
+    {
+        int m,d;
+        m=days/30;
+        d=days%30;
+        cout<<days<<" days "<<"=" << m<< " Month and " << d<<" days \n";
+    }
+ };
+int main()
+{
+    MyPractice q1;
+    int days;
+    cout<<"Please enter the DAYS you want to convert to months/days format: ";
+    cin>>days;
+    q1.daysToMonth(days);
+    
+    return 0;
+}
 
