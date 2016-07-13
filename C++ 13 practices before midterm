@@ -40,13 +40,13 @@ Output: 69 days = 2 Month and 9 days
         {
             for (int i=s+1;i<s+2*n;i+=2)
             {
-                cout<<s+1<<" ";
+                cout<<i<<" ";
             }
         }
         else
             for(int i=s;i<s+2*n;i+=2)//a=1 n=2 cout 1 3 5
             {
-                cout<<s<<" ";
+                cout<<i<<" ";
             }
     }
  };
