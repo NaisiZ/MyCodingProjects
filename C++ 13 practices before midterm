@@ -47,6 +47,7 @@ Output: 69 days = 2 Month and 9 days
                 cout<<i<<" ";
             }
     }
+//    3. Based on Ex2, get the average and sum of odd numbers displayed. 
     int sum()
     {
         total=
