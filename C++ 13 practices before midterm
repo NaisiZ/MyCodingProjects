@@ -20,7 +20,6 @@ Output: 69 days = 2 Month and 9 days
 */
     void daysToMonth(int days)
     {
-        int m,d;
         m=days/30;
         d=days%30;
         cout<<days<<" days "<<"=" << m<< " Month and " << d<<" days \n";
@@ -31,7 +30,6 @@ Output: 69 days = 2 Month and 9 days
  */
     void printOdd()
     {
-        int n,s;
         cout<<"Please enter the numbers of odd numbers you want:";
         cin>>n;
         cout<<"Please enter the number that you want to start with:";
@@ -49,6 +47,14 @@ Output: 69 days = 2 Month and 9 days
                 cout<<i<<" ";
             }
     }
+private:
+    int m=0;
+    int d=0;
+    int i=0;
+    int n=0;
+    int s=0;
+    int total=0;
+    int x=0;
  };
 int main()
 {
