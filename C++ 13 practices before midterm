@@ -64,7 +64,10 @@ int sumOf123(int x)
 /*    5. Write a program to ask user enter 2 integer and add 1 to both values, and sum all
 the numbers between. Example: 1
 3
-Sum is: 9*/;
+Sum is: 9*/
+/*
+6. Write a function that takes width and length as parameters, returns area and
+perimeter for square and rectangle.*/
 private:
     int m=0;
     int d=0;
