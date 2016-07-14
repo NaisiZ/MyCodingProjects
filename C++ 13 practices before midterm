@@ -47,6 +47,16 @@ Output: 69 days = 2 Month and 9 days
                 cout<<i<<" ";
             }
     }
+      /* int sum()
+    {
+        total=
+    }*/
+    int sumOf123(int x)
+    {
+        int array[10];
+        array=to_string(int x);
+        
+    };
 private:
     int m=0;
     int d=0;
