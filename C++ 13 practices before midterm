@@ -70,6 +70,12 @@ Sum is: 9*/
 perimeter for square and rectangle.*/
 /* 7. Find all the even number from user given starting number to user given ending
 number.*/
+/*8. Ask user to initialize an integer array of size 10, find the largest element, and get
+the occurrence time of the biggest number.(also try smallest)
+Example: 3 5 2 5 5 5 5 4 0
+The largest number is 5
+The occurrence is 5
+*/
 private:
     int m=0;
     int d=0;
