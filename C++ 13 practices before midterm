@@ -68,6 +68,8 @@ Sum is: 9*/
 /*
 6. Write a function that takes width and length as parameters, returns area and
 perimeter for square and rectangle.*/
+/* 7. Find all the even number from user given starting number to user given ending
+number.*/
 private:
     int m=0;
     int d=0;
