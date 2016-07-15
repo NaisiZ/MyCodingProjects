@@ -1,0 +1,46 @@
+//
+//  main.cpp
+//  inclass practice wk 10
+//
+//  Created by Naisi Zhen on 7/15/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+
+class A
+{
+private:
+    int x;
+    int y;
+public:
+    A(int a, int b);
+    friend int sum(A a);
+};
+
+A::A(int a, int b)
+{
+    x=a;
+    y=b;
+}
+
+class B
+{
+public:
+    
+};
+
+int sum(A a)
+{
+    return a.x+a.y;
+}
+
+int main() {
+    
+    A a(2,3);
+    cout<<sum(a)<<endl;
+    
+    return 0;
+}
