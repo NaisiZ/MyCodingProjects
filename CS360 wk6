@@ -1,0 +1,116 @@
+//Copyright by Naisi Zhen 8950
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+class MyWeek6
+{
+public:
+    int getWidth()
+    {
+        return width;
+    }
+    void setWidth(int a)
+    {
+        width = a;
+    }
+    int getLength()
+    {
+        return length;
+    }
+    void setLength(int b)
+    {
+        length = b;
+    }
+    int perimeterSquare(int width)
+    {
+        return width*4;
+    }
+    int areaSquare(int width)
+    {
+         return width * width;
+    }
+    int perimeterRetangle(int width, int length)
+    {
+         return (width + length) * 2;
+    }
+    int areaRetangle(int width, int length)
+    {
+         return width * length;
+    }
+private:
+    int width;
+    int length;
+};
+class Employee
+{
+private:
+    string name;
+    string id;
+    string city;
+    int age;
+public:
+    string getName()
+    {
+        return name;
+    }
+    void setName(string x)
+    {
+        name = x;
+    }
+    string getId()
+    {
+        return id;
+    }
+    void setId(string x)
+    {
+        id = x;
+    }
+    string getCity()
+    {
+        return city;
+    }
+    void setCity(string x)
+    {
+        city = x;
+    }
+    int getAge()
+    {
+        return age;
+    }
+    void setAge(int x)
+    {
+        age = x;
+    }
+    void checkAge(int age)
+    {
+        if (age > 50)
+            cout << "Hello "<< getName()<<", you are old!" << endl;
+        else
+            cout << "Hello " << getName() << ", you are pretty young!" << endl;
+    }
+};
+int main()
+{
+    MyWeek6 q1Square, q1Retangle;
+    q1Square.setWidth(10);
+    q1Retangle.setLength(5);
+    q1Retangle.setWidth(4);
+    cout << "The perimeter of Square is:" << q1Square.perimeterSquare(q1Square.getWidth()) << endl;
+    cout << "The area of Square is:" << q1Square.areaSquare(q1Square.getWidth()) << endl;
+    cout << endl;
+    cout << "The perimeter of Retangle is:" << q1Retangle.perimeterRetangle(q1Retangle.getWidth(), q1Retangle.getLength()) << endl;
+    cout << "The area of Retangle is:" << q1Retangle.areaRetangle(q1Retangle.getWidth(), q1Retangle.getLength()) << endl;
+   
+    cout << endl;
+    Employee e1;
+    e1.setAge(31);
+    e1.setCity("Fremont");
+    e1.setId("8950");
+    e1.setName("Naisi Zhen");
+    cout << "Name: "<< e1.getName() << endl;
+    cout << "ID: " <<e1.getId() << endl;
+    e1.checkAge(e1.getAge());
+    system("pause");
+    return 0;
+}
