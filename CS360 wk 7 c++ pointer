@@ -1,0 +1,63 @@
+//CS360L(E)_Week7_8950_Naisi Zhen
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+class Array
+{
+public:
+    int sum(int a[], int size)
+    {
+        int sum = 0;
+        for (int i = 0; i < size; i++)
+        {
+            sum += a[i];
+        }
+        cout << "The sum of all array element is: " << sum << endl;
+        return sum;
+    }
+    void replace (int *p, int size)
+    {
+        cout << "The replacing array is:" << endl;
+        for (int i = 0; i < size; i++)
+        {
+            cout << *(p +i) << " ";
+        }
+    }
+};
+int main()
+{
+   
+    int n[10];
+    for (int i = 0; i < 10; i++)
+    {
+        n[i] = i+1;
+        cout << n[i] << " ";
+       
+    }
+    cout << endl;
+ 
+    int sid=8950;
+    int* sidPtr = &sid;
+    cout << "The value of the variable sid is:"<<sid << endl;
+    cout << "The address of the variable sid is:"<<&sid << endl;
+    cout << "The value of the pointer sidPtr is:"<<sidPtr << endl;
+    cout << "The address of sidPtr without using pointer is:"<<&sidPtr << endl;
+    cout << "The value of the variable SID using pointer is:"<<*sidPtr << endl;
+   
+    int a[10];
+    cout << "Please enter 10 numbers:" << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> a[i];
+    }
+ 
+    Array q3;
+    int total=q3.sum(a, 10);
+    cout << "Sum=" << total << endl;
+    int *b=n;
+    q3.replace(b, 10);
+   
+    system("pause");
+    return 0;
+}
