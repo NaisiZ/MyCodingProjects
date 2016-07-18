@@ -1,0 +1,14 @@
+/*
+CS360L-(E) WEEK 9 Assignment
+Q1: Create function upper, take array as parameter, convert all elements
+into uppercase. Create function assign, take array as parameter, ask user to assign
+values for char array.
+In main, define char n[10] , call assign() to assign value as {‘a’,’b’...’j’}
+and call upper() to convert and display. Output:
+The elements of array are: a b c d e f g h i j
+The elements of array are: A B C D E F G H I J
+Q2: Declare string sid, first_name, last_name, course, section and ask
+user to assign value to it.(Use your own id and name)
+Display: 1. full_name (first_name + last_name)
+2. Class (course +section)
+*/
