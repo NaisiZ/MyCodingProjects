@@ -12,3 +12,25 @@ user to assign value to it.(Use your own id and name)
 Display: 1. full_name (first_name + last_name)
 2. Class (course +section)
 */
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main() {
+    int array_size=10;
+    char input[array_size] ;
+    cin>>input;
+    cout << "Enter a String of Charchters to be Capitalized : " ;
+    cin >> input;   // read a string
+    
+    // convert each lowercase char in the string to uppercase
+    for( int i=0 ; i < array_size ; ++i )
+    {
+        input[i] = toupper( input[i] ) ;
+    }
+    
+    // and print it out
+    cout << " " << input << " " ;
+    return 0;
+}
