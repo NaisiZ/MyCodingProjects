@@ -1,63 +1,68 @@
-//CS360L(E)_Week7_8950_Naisi Zhen
+
+/*
+ CS360L-(E) WEEK 9 Assignment
+ Q1: Create function upper, take array as parameter, convert all elements
+ into uppercase. Create function assign, take array as parameter, ask user to assign
+ values for char array.
+ In main, define char n[10] , call assign() to assign value as {‘a’,’b’...’j’}
+ and call upper() to convert and display. Output:
+ The elements of array are: a b c d e f g h i j
+ The elements of array are: A B C D E F G H I J
+ Q2: Declare string sid, first_name, last_name, course, section and ask
+ user to assign value to it.(Use your own id and name)
+ Display: 1. full_name (first_name + last_name)
+ 2. Class (course +section)
+ */
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
- 
-class Array
+
+class WK9
 {
 public:
-    int sum(int a[], int size)
+    void assign(char array[])
     {
-        int sum = 0;
-        for (int i = 0; i < size; i++)
+        cout<<"Please enter charcters of the array:"<<endl;
+        for (int i=0;i<10;i++)
         {
-            sum += a[i];
+            cin>>array[i];
         }
-        cout << "The sum of all array element is: " << sum << endl;
-        return sum;
     }
-    void replace (int *p, int size)
+    void upper(char a[])
     {
-        cout << "The replacing array is:" << endl;
-        for (int i = 0; i < size; i++)
+        for(int i=0; i<10;i++)
         {
-            cout << *(p +i) << " ";
+            a[i]=toupper(a[i]);
+            
+            cout<<" "<<a[i]<<" "<<endl;
         }
+    }
+    void q2()
+    {
+        string sid, first_name, last_name, course, section;
+        cout<<"Please enter you sid: "<<endl;
+        cin>>sid;
+        cout<<"Please enter you first_name: "<<endl;
+        cin>>first_name;
+        cout<<"Please enter you last_name: "<<endl;
+        cin>>last_name;
+        cout<<"Please enter you course: "<<endl;
+        cin>>course;
+        cout<<"Please enter you section: "<<endl;
+        cin>>section;
+        
+        cout<<"Your full name is:"<<first_name<<" "<<last_name<<endl;
+        cout<<"Your class is: "<<course<<" "<<section<<endl;
     }
 };
 int main()
 {
-   
-    int n[10];
-    for (int i = 0; i < 10; i++)
-    {
-        n[i] = i+1;
-        cout << n[i] << " ";
-       
-    }
-    cout << endl;
- 
-    int sid=8950;
-    int* sidPtr = &sid;
-    cout << "The value of the variable sid is:"<<sid << endl;
-    cout << "The address of the variable sid is:"<<&sid << endl;
-    cout << "The value of the pointer sidPtr is:"<<sidPtr << endl;
-    cout << "The address of sidPtr without using pointer is:"<<&sidPtr << endl;
-    cout << "The value of the variable SID using pointer is:"<<*sidPtr << endl;
-   
-    int a[10];
-    cout << "Please enter 10 numbers:" << endl;
-    for (int i = 0; i < 10; i++)
-    {
-        cin >> a[i];
-    }
- 
-    Array q3;
-    int total=q3.sum(a, 10);
-    cout << "Sum=" << total << endl;
-    int *b=n;
-    q3.replace(b, 10);
-   
-    system("pause");
+    char array[10];
+    WK9 q1;
+    q1.assign(array);
+    q1.upper(array);
+    
+    WK9 q2;
     return 0;
 }
