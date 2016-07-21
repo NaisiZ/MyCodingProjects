@@ -36,7 +36,7 @@ int main()
  2. Write a function to display next n odd numbers from the starting number a. (get
  both a and n values from user)
  */
-    void printOdd()
+    main()
     {
         cout<<"Please enter the numbers of odd numbers you want:";
         cin>>n;
@@ -56,10 +56,37 @@ int main()
             }
     }
 //    3. Based on Ex2, get the average and sum of odd numbers displayed. 
-    int sum()
+    #include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int n=0,s=0,sum=0;
+    cout<<"Please enter the numbers of odd numbers you want:";
+    cin>>n;
+    cout<<"Please enter the number that you want to start with:";
+    cin>>s;
+    if(s%2==0)//if s is even number
     {
-        total=
+        for (int i=s+1;i<s+2*n;i+=2)
+        {
+            cout<<i<<" ";
+            sum=sum+i;
+        }
     }
+    else
+    {
+        for(int i=s;i<s+2*n;i+=2)
+        {
+            cout<<i<<" ";
+            sum=sum+i;
+        }
+    }
+        cout<<sum;
+}
+
+
     /*4. Write a program to get the sum of the digits of user given integer. Example: 123
 Sum is : 6
 */
