@@ -1,0 +1,76 @@
+//
+//  MyClass.h
+//  C++ 13 practice
+//
+//  Created by Naisi Zhen on 7/22/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Department
+{
+public:
+    void Dpmt(int dnum, string dname)
+    :depno(no),dname(name)
+    {
+        cout<<"Department Number: "<<dnum;
+        cout<<"Department Name: "<<dname;
+    }
+    void setDnum(int dnum)
+    {
+        Dnum=dnum;
+    }
+    int getDnum()
+    {
+        return Dnum;
+    }
+    void setDname(int dname)
+    {
+        Dname=dname;
+    }
+    string getDname()
+    {
+        return Dname;
+    }
+private:
+    int Dnum;
+    string Dname;
+    
+};
+
+
+class employee:public Department
+{
+private:
+    int Enum;
+    string Ename;
+public:
+    void display()
+    {
+        cout<<"Hi";
+    }
+    void Employee(int x, string y)
+    :Department(x,y),empno(a),ename(b)
+    {
+        cout<<"ID: "<<Enum;
+        cout<<"Name: "<<Ename;
+    }
+    void setEnum(int enum)
+    {
+        Enum=enum;
+    }
+    int getEnum()
+    {
+        return Enum;
+    }
+    void setEname(int ename)
+    {
+        Ename=ename;
+    }
+    String getEname()
+    {
+        return Ename;
+    }
+};
