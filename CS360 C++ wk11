@@ -1,3 +1,11 @@
+
+//  main.cpp
+//  CS360 wk11
+//
+//  Created by Naisi Zhen on 7/24/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+/*
+
 Create a SavingsAccount class. Use a static data member annualInterestRate to store the annual interest rate for
 each of the savers. Each member of the class contains a private data member savingsBalance indicating the amount
 the saver currently has on deposit.
@@ -11,12 +19,59 @@ Write a test program to test class SavingsAccount. Create two different objects 
 with balances of $2000.00 and $3000.00, respectively. Set the annualInterestRate to 3 percent. Then calculate the monthly
 interest and print the new balances for each of the savers. Then set the annualInterestRate to 4 percent, calculate the next
 month’s interest and print the new balances for each of the savers.
-
+*/
 #include <iostream>
 using namespace std;
 
-class MyClass 11
+class SavingsAccount
 {
 public:
-    
+    SavingsAccount(float value) ;
+    static float annualInterestRate;
+    void calculateMonthlyInterest();
+    static void modifyIntererestRate(float value);
+    float GetBalance() const
+    {
+        return savingsBalance;
+    }
+private:
+    float savingsBalance;
+};
+SavingsAccount::SavingsAccount(float value)
+{
+    savingsBalance = value;
+}
+float SavingsAccount::annualInterestRate = 0;
+void SavingsAccount::calculateMonthlyInterest()
+{
+    savingsBalance += ((savingsBalance * annualInterestRate) / 12);
+}
+void SavingsAccount::modifyIntererestRate(float value)
+{
+    annualInterestRate = value;
+}
+
+int main()
+{
+    SavingsAccount saver1(2000.00);
+    SavingsAccount saver2(3000.00);
+    cout << "Current Savings Account balance : "<<endl;
+    cout << "SavingsAccount Saver 1 Savings Balance : $" << saver1.GetBalance() << endl;
+    cout << "SavingsAccount Saver 2 Savings Balance : $" << saver2.GetBalance() << endl;
+    cout << endl;
+    SavingsAccount::modifyIntererestRate(0.03);
+    saver1.calculateMonthlyInterest();
+    cout << "Calculate the monthly interest and print the new balance : " << endl;
+    cout << "Saver 1 Savings Account Balance : $" << saver1.GetBalance() << endl;
+    saver2.calculateMonthlyInterest();
+    cout << "Saver 2 Savings Account Balance : $" << saver2.GetBalance() << endl;
+    cout << endl;
+    SavingsAccount::modifyIntererestRate(0.04);
+    saver1.calculateMonthlyInterest();
+    cout << "Calculate next month interest and print the new balance : " << endl;
+    cout << "Saver 1 Savings Account Balance : $" << saver1.GetBalance() << endl;
+    saver2.calculateMonthlyInterest();
+    cout << "Saver 2 Savings Account Balance : $" << saver2.GetBalance() << endl;
+    cout << endl;
+    return 0;
 }
