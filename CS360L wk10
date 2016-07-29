@@ -1,0 +1,78 @@
+//CS360L WK10
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Employee
+{
+public:
+Employee(string name, int id, string city);
+void Display();
+void SetName(string name1);
+string GetName();
+void SetID(int id1);
+int GetID();
+void SetCity(string city1);
+string GetCity();
+private:
+string name_;
+int id_;
+string city_;
+};
+
+Employee::Employee(string name, int id, string city)
+{
+    name_=name;
+    id_=id;
+    city_=city;
+}
+void Employee::Display()
+{
+cout<<name_<<endl<<id_<<endl<<city_<<endl<<endl;
+}
+void Employee::SetName(string name1)
+{
+name_=name1;
+}
+string Employee::GetName()
+{
+return name_;
+}
+void Employee::SetID(int id1)
+{
+id_=id1;
+}
+int Employee::GetID()
+{
+return id_;
+}
+void Employee::SetCity(string city1)
+{
+city_=city1;
+}
+string Employee::GetCity()
+{
+return city_;
+}
+
+
+int main(void)
+{
+Employee E1("Bob", 12345, "Fremont");
+cout<<"Information of Emp1: "<<endl<<"Before change: "<<endl;
+E1.Display();
+E1.SetName("Brad");
+E1.SetID(54321);
+E1.SetCity("Milpitas");
+cout<<"After change:"<<endl;
+E1.Display();
+Employee E2("Mike", 45687, "Oakland");
+cout<<"Information for Emp2: "<<endl<<"Before change: "<<endl;
+E2.Display();
+E2.SetName("Micheal");
+E2.SetID(45678);
+E2.SetCity("Fremont");
+cout<<"After change:"<<endl;
+E2.Display();
+return 0;
+    }
