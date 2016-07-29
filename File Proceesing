@@ -1,0 +1,27 @@
+//
+//  main.cpp
+//  CS360 C++ WK12 in class
+//
+//  Created by Naisi Zhen on 7/29/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    // insert code here...
+    string name;
+    int age;
+    ofstream fileProcessing("fileProcessingTrial.txt", ios::out);
+    cout<<"Please enter your name: "<<endl;
+    cin>>name;
+    cout<<"Please enter your age: "<<endl;
+    cin>>age;
+    fileProcessing<<name<<" "<<age<<endl;
+    return 0;
+}
