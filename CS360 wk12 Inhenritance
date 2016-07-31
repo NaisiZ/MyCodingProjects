@@ -1,0 +1,39 @@
+/*
+Write the declaration for class B. The class’s members should be:
+m, an integer. This variable should not be accessible to code outside the class or to member functions in any class derived from class B.
+n, an integer. This variable should not be accessible to code outside the class, but should be accessible to member functions in any class derived from class B.
+setM, getM, setN, and getN. These are the set and get functions for the member variables m and n. These functions should be accessible to code outside the class.
+calc, a public virtual member function that returns the value of m times n.
+sum, a public pure virtual member function that accepts two integers as its parameters.
+
+Next write the declaration for class D (non-abstract/concrete class), which is derived from class B. The class’s members should be:
+q, a float. This variable should not be accessible to code outside the class but should be accessible to member functions in any class derived from class D.
+r, a float. This variable should not be accessible to code outside the class, but should be accessible to member functions in any class derived from class D.
+setQ, getQ, setR, and getR. These are the set and get functions for the member variables q and r. These functions should be accessible to code outside the class.
+calc, a public member function that overrides the base class calc function. This function should return the value of q times r.
+sum, a public member function that implements the base class sum function. This function should return the sum of the two parameters.
+*/
+
+Class B
+{
+  private:
+    int m;
+  protected:
+    int n;
+  public:
+    void setM(m)
+    {
+      M=m;
+    }
+    int getM()
+    {
+      return M;
+    }
+    void setN(n)
+    {
+      N=n;
+    }
+    int getN()
+    {
+      return N;
+    }
