@@ -1,0 +1,55 @@
+//
+//  main.cpp
+//  CS360_in class wk13
+//
+//  Created by Naisi Zhen on 8/5/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+struct Bank
+{
+    int ID;
+    string name;
+    double balance;
+    
+};
+
+class MyClass
+{
+public:
+    
+    void modify (Bank *b)
+    {
+        cout<<"Enter your ID: " ;
+        cin>>b->ID;
+        cout<<"Enter your name: " ;
+        cin>>b->name;
+        cout<<"Enter your gpa: " ;
+        cin>>b->balance;
+    }
+};
+
+int main()
+{
+    Bank b1;
+    Bank *p;
+    p=&b1;
+    
+    cout<<"Enter your ID: " ;
+    cin>>p->ID;
+    cout<<"Enter your name: " ;
+    cin>>p->name;
+    cout<<"Enter your gpa: " ;
+    cin>>p->balance;
+    
+    MyClass a;
+    a.modify(&b1);
+    
+    cout<<b1.ID<<endl;
+    cout<<b1.name<<endl;
+    cout<<b1.balance<<endl;
+    return 0;
+}
