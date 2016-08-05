@@ -1,0 +1,31 @@
+//
+//  main.cpp
+//  CS360_in class wk13
+//
+//  Created by Naisi Zhen on 8/5/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+union Str
+{
+    int x;
+    int y;
+};
+int main()
+{
+    Str s1;
+    s1.x=10;
+    cout<<s1.x<<endl;
+    s1.y=20;
+    cout<<s1.x<<endl;
+    cout<<s1.y<<endl;
+    s1.x=22;
+    
+    cout<<s1.x<<endl;
+    cout<<s1.y<<endl;
+    
+    return 0;
+}
