@@ -1,0 +1,48 @@
+//
+//  main.cpp
+//  CS360_in class wk13
+//
+//  Created by Naisi Zhen on 8/5/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+struct Student
+{
+    int studentID;
+    string name;
+    short yearInSchool;
+    double gpa;
+    
+};
+
+void print (Student s)
+{
+    cout<<s.studentID;
+    cout<<s.name;
+    cout<<s.yearInSchool;
+    cout<<s.gpa;
+}
+
+int main() {
+    Student stud1;
+    cout<<"Enter yourID: " ;
+    cin>>stud1.studentID;
+    cout<<"Enter your name: " ;
+    cin>>stud1.name;
+    cout<<"Enter your yearInSchool: " ;
+    cin>>stud1.yearInSchool;
+    cout<<"Enter your gpa: " ;
+    cin>>stud1.gpa;
+    
+    Student stu2;
+    Student *p;
+    p=&Stu2;
+    //same to Stu1.StudentID=123;
+    p->StudentID=123;
+    print (stud1);
+    
+    return 0;
+}
