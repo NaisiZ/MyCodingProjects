@@ -1,0 +1,94 @@
+//CS360 C++ WK12
+
+#include <iostream>
+using namespace std;
+class B
+{
+private:
+	int m;
+protected:
+	int n;
+public:
+	void setM(int x)
+	{
+		m=x;
+	}
+	int getM()
+	{
+		return m;
+	}
+	void setN(int y)
+	{
+		n=y;
+	}
+	int getN()
+	{
+		return n;
+	}
+	virtual int calc(int x,int y)
+	{
+		return m*n;
+	}
+	virtual ~B()
+	{
+	
+	}
+	virtual int sum(int x,int y) const=0;
+
+};
+
+class D : public B
+{
+private:
+	float q,r;
+public:
+	void setQ(float a)
+	{
+		q=a;
+	}
+	float getQ()
+	{
+		return q;
+	}
+	void setR(float b)
+	{
+		r=b;
+	}
+	float getR()
+	{
+		return r;
+	}
+	float calc(float a,float b)
+	{
+		return q*r;
+	}
+	int sum(int a,int b) const
+	{
+		return a+b;
+	}
+
+};
+
+
+int main()
+{
+	int m,n;
+	float e,f;
+	cout <<"Enter two numbers:"<<endl;
+	cin >>m>>n;
+	cout <<"Enter two float numbers:"<<endl;
+	cin >>e>>f;
+	B*b=new D();
+	b->setM(m);
+	b->setN(n);
+	D*d=new D();
+	d->setQ(e);
+	d->setR(f);
+	cout <<"Integers are: "<<b->getM()<<" & "<<b->getN()<<endl;
+	cout <<"Float are: "<<d->getQ()<<" & "<<d->getR()<< endl;
+	cout <<"clac of intergers is:"<<b->calc(m, n)<<endl;
+	cout <<"clac of floats is:"<<d->calc(e, f)<<endl;
+	cout <<"Sum is: "<<d->sum(m, n)<<endl;
+	return 0;
+
+}
