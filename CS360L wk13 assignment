@@ -1,0 +1,27 @@
+CS360L – F
+Week 13
+Name:
+ID:
+Class: CS360L – F
+Your lab should include:
+ The questions and your answers
+ The screenshot of your program running (console)
+ The source code (*.cpp), attached along this file in a .zip file
+If your lab is missing any of these 3 points, it won’t be graded. Please write your answers in this
+file.
+1. Create a class named Shape:
+ Create 1 private variables named length & width
+ Create get and set function for length and width
+ Create 2 pure virtual function getArea and getPerimeter
+2. Create a class named Rectangle inherits Shape class:
+ Implement getArea, and getPerimeter
+3. Create a class named Square that inherits Shape class:
+ Implement getArea and getPerimeter
+4. In main function:
+ Create 2 objects named rect1 and rect2 for rectangle class
+ Create 2 objects named sqr1 and sqr2 for rectangle class
+ Create 4 pointers objects of the Shape class pointing to the objects of Rectangle and
+Square
+ With the help of the pointers: set the length and width for rect1 and rect2
+ Similarly, set the length for sqr1 and sqr2
+ With the help of the pointers: Print the area and Perimeter of all 4 objects.
