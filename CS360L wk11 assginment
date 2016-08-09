@@ -1,0 +1,16 @@
+CS360L-(E) WEEK 11 Assignment
+Note:
+Homework should contain :
+ source file (.cpp)
+ Word / pdf file. Include your code and the snapshot of your output.  Zip files to submit in your portal. Format example: CS360L(E)_Week11_12345_name.zip
+Q1: On class exercise: class Department and class Employee. Department: private int deptno and string dname. Constructor to
+initialize deptno and dname, setter and getter function for 2 variables. Employee: inherit from Department, contain private int empno and
+string ename. Constructor, setter and getter functions. In main, create object e1 of Employee, use e1 to display all 4
+information. Output:
+Q2: Class Owner and class Shop1, Shop2, Shop3
+Owner: private double sales, double expense, constructor to initialize
+sales and expense, setter and getter function for 2 variables. Shop1, Shop2, Shop3: inherit from Owner class, has private double rate
+variable. Constructor and also double profit function, setter and getter
+functions for rate.(profit = (sales-expense) * rate)
+In main: Create objects s1, s2, s3 for class Shop1, Shop2, Shop3, display
+the profit of all 3 shops. Output:
