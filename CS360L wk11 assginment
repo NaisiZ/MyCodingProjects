@@ -14,3 +14,71 @@ variable. Constructor and also double profit function, setter and getter
 functions for rate.(profit = (sales-expense) * rate)
 In main: Create objects s1, s2, s3 for class Shop1, Shop2, Shop3, display
 the profit of all 3 shops. Output:
+
+//
+//  main.cpp
+//  CS360L wk11
+//
+//  Created by Naisi Zhen on 8/9/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Department
+{
+private:
+    int deptno;
+    string dname;
+public:
+    void setDeptno(int Deptno)
+    {
+        deptno=Deptno;
+    }
+    int getDeptno()
+    {
+        return deptno;
+    }
+    void setDname(string Dname)
+    {
+        dname=Dname;
+    }
+    string getDname()
+    {
+        return dname;
+    }
+};
+
+MyClass::deptno(int x);
+MyClass::dname(string y);
+
+class Employee: Department
+{
+private:
+    int empno;
+    string ename;
+public:
+    void setEmpno(int Empno)
+    {
+        empno=Empno;
+    }
+    int getEmpno()
+    {
+        return empno;
+    }
+    void setEname(string Ename)
+    {
+        ename=Ename;
+    }
+    string getEname()
+    {
+        return ename;
+    }
+};
+
+int main() {
+    
+    return 0;
+}
