@@ -14,71 +14,203 @@ variable. Constructor and also double profit function, setter and getter
 functions for rate.(profit = (sales-expense) * rate)
 In main: Create objects s1, s2, s3 for class Shop1, Shop2, Shop3, display
 the profit of all 3 shops. Output:
-
-//
-//  main.cpp
-//  CS360L wk11
-//
-//  Created by Naisi Zhen on 8/9/16.
-//  Copyright © 2016 Naisi Zhen. All rights reserved.
-//
-
 #include <iostream>
 #include <string>
 using namespace std;
-
 class Department
 {
 private:
     int deptno;
     string dname;
 public:
-    void setDeptno(int Deptno)
+    Department(int a, string b)
     {
-        deptno=Deptno;
+        deptno=a;
+        dname=b;
+    }
+    void setDeptno(int a)
+    {
+        deptno=a;
     }
     int getDeptno()
     {
         return deptno;
     }
-    void setDname(string Dname)
+    void setDname(string b)
     {
-        dname=Dname;
+        dname=b;
     }
     string getDname()
     {
         return dname;
     }
+    
 };
-
-MyClass::deptno(int x);
-MyClass::dname(string y);
-
-class Employee: Department
+class Employee : public Department
 {
 private:
     int empno;
     string ename;
 public:
-    void setEmpno(int Empno)
+    Employee(int x, string y,int a,string b):Department(a, b)
     {
-        empno=Empno;
+        empno=x;
+        ename=y;
+    }
+    void setEmpno(int x)
+    {
+        empno=x;
     }
     int getEmpno()
     {
         return empno;
     }
-    void setEname(string Ename)
+    void setEname(string y)
     {
-        ename=Ename;
+        ename=y;
     }
     string getEname()
     {
         return ename;
     }
+    void display()
+    {
+        cout<<"Information of Employee: "<<endl;
+        cout<<"Department Name: "<<getDname()<<endl;
+        cout<<"Department Number: "<<getDeptno()<<endl;
+        cout<<"Employee Name: "<<getEname()<<endl;
+        cout<<"Employee Number: "<<getEmpno()<<endl;
+        cout<<endl;
+    }
 };
 
-int main() {
+class Owner
+{
+private:
+    double sales;
+    double expense;
+public:
+    Owner(double a, double b)
+    {
+        sales=a;
+        expense=b;
+    }
+    void setSales(double a)
+    {
+        sales=a;
+    }
+    double getSales()
+    {
+        return sales;
+    }
+    void setExpense(double b)
+    {
+        expense=b;
+    }
+    double getExpense()
+    {
+        return expense;
+    }
+};
+
+class Shop1 : public Owner
+{
+private:
+    double rate;
+public:
+    Shop1(double x,double a, double b):Owner(a,b)
+    {
+        rate=x;
+    }
+    void setRate(double x)
+    {
+        rate=x;
+    }
+    double getRate()
+    {
+        return rate;
+    }
+    double profit()
+    {
+        return (getSales()-getExpense())*getRate();
+    }
+    void display()
+    {
+        cout<<"Shop1 profit: "<<profit()<<endl;
+    }
+};
+
+class Shop2 :public Owner
+{
+private:
+    double rate;
+public:
+    Shop2(double y,double a,double b) :Owner(a,b)
+    {
+        rate=y;
+    }
+    void setRate(double y)
+    {
+        rate=y;
+    }
+    double getRate()
+    {
+        return rate;
+    }
+    double profit()
+    {
+        return (getSales()-getExpense())*getRate();
+    }
+    void display()
+    {
+        cout<<"Shop2 profit: "<<profit()<<endl;
+    }
+    
+};
+
+class Shop3 :public Owner
+{
+private:
+    double rate;
+public:
+    Shop3(double z,double a,double b) :Owner(a,b)
+    {
+        rate=z;
+    }
+    void setRate(double z)
+    {
+        rate=z;
+    }
+    double getRate()
+    {
+        return rate;
+    }
+    double profit()
+    {
+        return (getSales()-getExpense())*getRate();
+    }
+    void display()
+    {
+        cout<<"Shop3 profit: "<<profit()<<endl;
+    }
+    
+};
+int main()
+{
+    Employee e1(12345,"Bob",20,"Accounting");
+    e1. display();
+ 
+    Shop1 s1(10.50,50.25,35.50);
+    s1.display();
+    
+    Shop2 s2(15.75,99.5,70.75);
+    s2.display();
+    
+    Shop3 s3(20.55,300.55,250.25);
+    s3.display();
+    
+    cout<<endl;
     
     return 0;
+    
 }
