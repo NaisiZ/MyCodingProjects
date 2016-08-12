@@ -1,0 +1,24 @@
+int mom,baby;
+cin>>mom>>baby;
+
+try
+｛
+  //case1:
+    throw 0;
+  //case 2:
+    throw a;
+  //case 3:
+    throw 1.1;
+  }
+catch(int x) //if mom<baby
+{
+cout<<"..."<<"Error number"<<x;
+}
+catch(string y) //if user entered a character rather than int
+{
+cout<<"..."<<"Error number"<<y;
+}
+catch(double z) //if entered a double
+{
+cout<<"..."<<"Error number"<<z;
+}
