@@ -26,17 +26,17 @@ Class Rectangle:public Shape
     this->width=a;  //??
     this->length=b; //??
   }
-  int getWidth(int width)
+  int getWidth()
   {
-    return Width=width;
+    return width;
   ｝
   void setWidth(int width)
   {
     Width=width;
   }
-  int getLength(int length)
+  int getLength()
   {
-    return Length=length;
+    return length;
   ｝
   void setLength(int length)
   {
