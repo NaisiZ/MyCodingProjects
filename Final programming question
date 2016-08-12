@@ -1,0 +1,50 @@
+Create an abstract class Shape (Super Class) that has two pure virtual functions
+  getArea()
+  getPerimeter()
+Create a concrete (non-abstract) subclass - Rectangle - that has 2 private variables(Width, Length)
+It also has 4 function (set, get), two function implementations
+In the main, prompt the use to enter the width and the length of the rectangle
+
+#include <iostream>
+using namespace std;
+
+Class Shape
+{
+public:
+int getArea(int a, int b) const = 0;
+int getPerimeter(int a, int b) const = 0;  //to make it a pure virtual function and make the Class an abstract class
+}
+
+Class Rectangle:public Shape
+{
+  private:
+  int Width;
+  int Length;
+  public:
+??  this->width=a;
+??  this->length=b;
+  int getWidth(int width)
+  {
+    return Width=width;
+  ｝
+  void setWidth(int width)
+  {
+    Width=width;
+  }
+  int getLength(int length)
+  {
+    return Length=length;
+  ｝
+  void setLength(int length)
+  {
+    Length=length;
+  }
+  int Area(int a, int b)
+  {
+    return a*b;
+  }
+  int Perimeter(int a, int b)
+  {
+    return 2*(a+b)
+  }
+}
