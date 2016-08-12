@@ -1,0 +1,33 @@
+#include<iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  int a, b;
+  cout<<"Enter 2 numbers: ";
+  cin>>a>>b;
+  
+  ofstream file("number.txt");              //first run will create the file "number.txt"
+                                            //every run afterwards will overwrite the file 
+  //ofstream file ("number.txt", ios::app) // a new run will append the newly added value at the end of file
+ 
+ ifstream input("number.txt"); //read data from file "number.txt"
+ input >> a;  //same syntax as cin
+ cout << a;
+ 
+ int a[8]
+ /* using a for loop to read the file
+ int i=0;
+ while ( input>> a[i])
+ {
+    count<<a[i]<<endl;
+    i++;
+  }
+  */
+  
+  file << a << endl; //same syntax as cout
+  file << b << endl;
+  
+  return 0;
+}
