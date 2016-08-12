@@ -1,0 +1,118 @@
+/*
+1.Data type
+Char
+Int(neg,0,pos) unsigned int (pos, big number)
+string
+float
+double
+boolean (true!=0(other than 0)/false=0)
+
+2.Control statements
+  if..else
+  for ( ; ; )   //you know how many times you want to run
+      for(int 1=0; i<10; i++)
+      {
+      
+      }
+  while, do..while(at least run one time)         //you may not know how many time you want to run
+      while(int i<10)
+      {
+        i++;
+      }
+      
+  switch/case
+
+3. Function
+
+  a.constants->variables
+  int add(int a, int b) //assuming it's a public function
+  {
+  return a+b
+  }
+  int main
+  {
+    add(2,3)
+  }
+  
+  b.variables->variables
+  int add(int a, int b) //assuming it's a public function
+  {
+  return a+b
+  }
+  int main
+  {
+    int a=10;
+    int y=20;
+    add(x,y);
+  }
+  c.addresses->pointers
+  int add(int*a, int*b) //assuming it's a public function
+  {
+  return a+b
+  }
+  int main
+  {
+    int a=10;
+    int y=20;
+    add(&x,&y);
+  }
+  d. pointer->pointer
+  int add(int a, int b) //assuming it's a public function
+  {
+  return a+b
+  }
+  int main
+  {
+    int a=10;
+    int y=20;
+    int *p1,*p2;
+    p1=&x;
+    p2=&y;
+    add(p1,p2);
+  }
+4.Class
+  class Myclass
+  {
+  public:
+  MyClass(int,int)
+  int add(int,int)
+  private:
+  int x;
+  int y;
+  };
+5.pointers
+  int Main()
+  {
+  MyClass m(2,3); //initialization
+  }
+  int Main()
+  {
+    MyClassm(2,3);
+    MyClasss* p;    //created pointer p but p hasn't been pointer to the MyClass
+    p=&m;         //assign pointer p to MyClass object m
+    p->add(2,3); // or m.add(2,3);
+  }
+  
+  MyClass (int a , int b)
+  {
+  this->x=a;
+  this->y=b;
+  }
+  int main()
+  {
+  MyClass m1(2,3); //"this" point to m1 up to now
+  MyClass m2(4,5);  //m2 is the current object! "this" pointer points to m2 now.
+6.Inheritance/polymopheism
+  superclass must be an abstruct class (which means must have at lease pure virtual function)
+  
+  virtual X::X()const=0; //prototype in public
+  
+  In order to make the subclass non-abstruct, we must implement the above prototype first before running
+  
+  main()
+  {
+  B b(2,3); //B is the subclass
+  A* p = &b;  // pointer to the superclass; &b  !!this is the polymopheism: assign sth. belong to subClass to 
+                 the sth. belong to superClass
+  }                 
+  
