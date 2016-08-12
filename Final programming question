@@ -21,8 +21,11 @@ Class Rectangle:public Shape
   int Width;
   int Length;
   public:
-??  this->width=a;
-??  this->length=b;
+  Rectangle()
+  {
+    this->width=a;  //??
+    this->length=b; //??
+  }
   int getWidth(int width)
   {
     return Width=width;
@@ -47,4 +50,4 @@ Class Rectangle:public Shape
   {
     return 2*(a+b)
   }
-}
+};
