@@ -25,3 +25,42 @@ Square
  With the help of the pointers: set the length and width for rect1 and rect2
  Similarly, set the length for sqr1 and sqr2
  With the help of the pointers: Print the area and Perimeter of all 4 objects.
+//
+//  main.cpp
+//  CS360L(F) wk13
+//
+//  Created by Naisi Zhen on 8/17/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+#include <iostream>
+using namespace std;
+
+class Shape
+{
+private:
+    double lengthAndWidth;
+public:
+    double getLengthAndWidth()
+    {
+        return lengthAndWidth;
+    }
+    void setLengthAndWidth(double l)
+    {
+        lengthAndWidth=l;
+    }
+    virtual void getArea() const =0;
+    virtual void getPerimeter() const =0;
+};
+
+class Retangle: public Shape
+{
+    
+    void getArea(double w， double l){
+
+    return w*l;
+    }
+};
+int main() {
+
+    return 0;
+}
