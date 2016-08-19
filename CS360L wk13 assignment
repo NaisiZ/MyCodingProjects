@@ -38,29 +38,68 @@ using namespace std;
 class Shape
 {
 private:
-    double lengthAndWidth;
+    double length, width;
 public:
-    double getLengthAndWidth()
+    double getLength()
     {
-        return lengthAndWidth;
+        return length;
     }
-    void setLengthAndWidth(double l)
+    void setLength(double l)
     {
-        lengthAndWidth=l;
+        length=l;
     }
-    virtual void getArea() const =0;
-    virtual void getPerimeter() const =0;
+    double getWidth()
+    {
+        return width;
+    }
+    void setWidth(double w)
+    {
+        width=w;
+    }
+    virtual double getArea() const =0;
+    virtual double getPerimeter() const =0;
 };
 
-class Retangle: public Shape
+class Rectangle: public Shape
 {
-    
-    void getArea(double w， double l){
-
-    return w*l;
+public:
+    double getArea(double w, double l)
+    {
+         return w*l;
+    }
+    double getPerimeter(double w, double l)
+    {
+        return (w*l)*2;
     }
 };
+class Square: public Shape
+{
+public:
+    double getArea(double w)
+    {
+        return w*w;
+    }
+    double getPerimeter(double w)
+    {
+        return w*4;
+    }
+};
+Rectangle::Rectangle
 int main() {
-
+    Rectangle rect1,rect2;
+    Square sqr1, sqr2;
+    Shape *shape1=&rect1;
+    Shape *shape2=&rect2;
+    Shape *shape3=&sqr1;
+    Shape *shape4=&sqr2;
+    rect1->getArea();
+    rect2->getArea();
+    sqr1->getArea();
+    sqr2->getArea();
+    rect1->getPerimeter();
+    rect2->getPerimeter();
+    sqr1->getPerimeter();
+    sqr2->getPerimeter();
+    
     return 0;
 }
