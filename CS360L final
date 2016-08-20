@@ -1,0 +1,274 @@
+Program 1:
+	code:
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class Bank
+{
+private:
+    string bankName;
+    int bankNo;
+    string bankLocation;
+    int bankTel;
+public:
+    Bank(string Na, int No, string Lo, int Tel)
+    {
+        
+    }
+    string getBankName()
+    {
+        return bankName;
+    }
+    void setBankName(string Na)
+    {
+        bankName=Na;
+    }
+    int getBankNo()
+    {
+        return bankNo;
+    }
+    void setBankNo(int No)
+    {
+        bankNo=No;
+    }
+    
+    string getBankLocation()
+    {
+        return bankLocation;
+    }
+    void setBankLocation(string Lo)
+    {
+        bankLocation=Lo;
+    }
+    int getBankTel()
+    {
+        return bankTel;
+    }
+    void setBankTel(int Tel)
+    {
+        bankTel=Tel;
+    }
+    virtual double bankApr(double a, double b) =0;
+    virtual void print(){};
+};
+
+class Deposit: public Bank
+{
+private:
+    string name;
+    double money;
+public:
+    Deposit(string Na, int No, string Lo, int Tel, string name, double money)
+    :Bank(Na, No, Lo, Tel)
+    {
+    }
+    
+    string getName()
+    {
+         return name;
+    }
+    void setName(string n)
+    {
+        name=n;
+    }
+    double getMoney()
+    {
+        return money;
+    }
+    void setMoney(double m)
+    {
+        money=m;
+    }
+    double bankApr(double m, double rate)
+    {
+        return m*rate;
+    }
+    void print ()
+    {
+        cout<<getBankNo()<<endl;
+        cout<<getBankName()<<endl;
+        cout<<getBankLocation()<<endl;
+        cout<<getBankTel()<<endl;
+        cout<<name<<endl;
+        cout<<money<<endl;
+    }
+};
+class Credit: public Bank
+{
+private:
+    string name;
+    double creditLine;
+public:
+    Credit(string Na, int No, string Lo, int Tel, string name, double creditLine)
+    :Bank(Na, No, Lo, Tel)
+    {}
+    
+    string getName()
+    {
+        return name;
+    }
+    void setName(string nc)
+    {
+        name=nc;
+    }
+    double getCreditLine()
+    {
+        return creditLine;
+    }
+    void setCreditLine(double cl)
+    {
+        creditLine=cl;
+    }
+    double bankApr(double creditLine, double rate)
+    {
+        return creditLine*rate;
+    }
+    void print ()
+    {
+        cout<<getBankNo()<<endl;
+        cout<<getBankName()<<endl;
+        cout<<getBankLocation()<<endl;
+        cout<<getBankTel()<<endl;
+        cout<<creditLine<<endl;
+        cout<<name<<endl;
+    }
+};
+
+
+int main() {
+    Deposit d1("Chase", 0001, "Fremont", 123456789, "Bob", 3000);
+    Credit c1("Chase", 0001, "Fremont", 123456789, "Bob", 10000);
+    Bank *p1;
+    Bank *p2;
+    p1=&d1;
+    p2=&c1;
+    
+    p1->setBankName("Chase");
+    p1->setBankNo(0001);
+    p1->setBankLocation("Fremont");
+    p1->setBankTel(123456789);
+    d1.setName("Bob");
+    d1.setMoney(3000);
+    d1.bankApr(3000, 0.45);
+    
+    p2->setBankName("Chase");
+    p2->setBankNo(0001);
+    p2->setBankLocation("Fremont");
+    p2->setBankTel(123456789);
+    c1.setName("Bob");
+    c1.setCreditLine(10000);
+    c1.bankApr(10000, 0.23);
+    
+    cout<<"Deposit Inforamtion"<<endl;
+    cout<<"Bank Name: "<<p1->getBankName()<<endl;
+    cout<<"Bank Number: "<<p1->getBankNo()<<endl;
+    cout<<"Bank Location: "<<p1->getBankLocation()<<endl;
+    cout<<"Bank Tel: "<<p1->getBankTel()<<endl;
+    cout<<"Name: "<<d1.getName()<<endl;
+    cout<<"Money: "<<d1.getMoney()<<endl;
+    cout<<"Annual Interest: "<<d1.bankApr(3000,0.45)<<endl;
+    
+    
+    cout<<"Credit Information"<<endl;
+    cout<<"Bank Name: "<<p2->getBankName()<<endl;
+    cout<<"Bank Number: "<<p2->getBankNo()<<endl;
+    cout<<"Bank Location: "<<p2->getBankLocation()<<endl;
+    cout<<"Bank Tel: "<<p2->getBankTel()<<endl;
+    cout<<"Name: "<<c1.getName()<<endl;
+    cout<<"Money: "<<c1.getCreditLine()<<endl;
+    cout<<"Annual Interest: "<<c1.bankApr(10000,0.23)<<endl;
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+Program 2:
+	code:
+
+
+int main() {
+    Deposit d1("Chase", 0001, "Fremont", 123456789, "Bob", 3000);
+    Credit c1("Chase", 0001, "Fremont", 123456789, "Bob", 10000);
+    Bank *p1;
+    Bank *p2;
+    p1=&d1;
+    p2=&c1;
+    
+    p1->setBankName("Chase");
+    p1->setBankNo(0001);
+    p1->setBankLocation("Fremont");
+    p1->setBankTel(123456789);
+    d1.setName("Bob");
+    d1.setMoney(3000);
+    d1.bankApr(3000, 0.45);
+    
+    p2->setBankName("Chase");
+    p2->setBankNo(0001);
+    p2->setBankLocation("Fremont");
+    p2->setBankTel(123456789);
+    c1.setName("Bob");
+    c1.setCreditLine(10000);
+    c1.bankApr(10000, 0.23);
+    
+    ofstream file1, file2;
+    file1.open("C:\\Deposit.txt");
+    cout<<"Deposit Information"<<endl;
+    cout<<"Bank Name: "<<p1->getBankName()<<endl;
+    cout<<"Bank Number: "<<p1->getBankNo()<<endl;
+    cout<<"Bank Location: "<<p1->getBankLocation()<<endl;
+    cout<<"Bank Tel: "<<p1->getBankTel()<<endl;
+    cout<<"Name: "<<d1.getName()<<endl;
+    cout<<"Money: "<<d1.getMoney()<<endl;
+    cout<<"Annual Interest: "<<d1.bankApr(3000,0.45)<<endl;
+    
+    file2.open("C:\\Credit.txt");
+    cout<<"Bank Name: "<<p2->getBankName()<<endl;
+    cout<<"Bank Number: "<<p2->getBankNo()<<endl;
+    cout<<"Bank Location: "<<p2->getBankLocation()<<endl;
+    cout<<"Bank Tel: "<<p2->getBankTel()<<endl;
+    cout<<"Name: "<<c1.getName()<<endl;
+    cout<<"Money: "<<c1.getCreditLine()<<endl;
+    cout<<"Annual Interest: "<<c1.bankApr(10000,0.23)<<endl;
+    
+
+    return 0;
+}
+Question 3:
+	code:
+virtual void print(ofstream a.txt )
+void print(Deposit.txt)
+{
+    file1.open("Deposit.txt");
+    file1<<"Deposit Inforamtion"<<endl;
+    file1<<"Bank Name: "<<p1->getBankName()<<endl;
+    file1<<"Bank Number: "<<p1->getBankNo()<<endl;
+    file1<<"Bank Location: "<<p1->getBankLocation()<<endl;
+    file1<<"Bank Tel: "<<p1->getBankTel()<<endl;
+    file1<<"Name: "<<d1.getName()<<endl;
+    file1<<"Money: "<<d1.getMoney()<<endl;
+    file1<<"Annual Interest: "<<d1.bankApr(3000,0.45)<<endl;
+}
+void print(Deposit.txt)
+{
+    file2.open("Credit.txt");
+    file2<<"Deposit Inforamtion"<<endl;
+    file2<<"Bank Name: "<<p1->getBankName()<<endl;
+    file2<<"Bank Number: "<<p1->getBankNo()<<endl;
+    file2<<"Bank Location: "<<p1->getBankLocation()<<endl;
+    file2<<"Bank Tel: "<<p1->getBankTel()<<endl;
+    file2<<"Name: "<<c1.getName()<<endl;
+    file2<<"Money: "<<c1.getCreditLine()<<endl;
+    file2<<"Annual Interest: "<<d1.bankApr(10000,0.23)<<endl;
+}
