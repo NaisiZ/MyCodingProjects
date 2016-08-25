@@ -1,0 +1,26 @@
+ ...
+    "parameters" : [{
+      "name" : "whatEverThatArrayCalled",
+      "type" : "array",
+      "items" : {
+        "$ref" : "whatEverThatArrayCalled"
+      }
+      ...
+    }],
+    "models" : {
+   {
+    "id" : "whatEverThatArrayCalled",
+    "properties": 
+        {
+       "whatEverThatArrayCalled" :
+            {
+         "type" : "array",
+         "items":{"name":"a",
+                  "name":"b",
+                  "name":"c"
+                  },
+
+             }
+         }
+    }
+ } 
