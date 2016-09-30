@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class readInput{
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    //declear a new variable called "input" which type is "Scanner", assign next "System.in" value to "input"; cin>>input
+    
+    System.out.print("Enter a number for radius: ");
+    //cout<<"Enter a number for radius: ";
+    
+    double radius = input.nextDouble(); 
+    //read and assign next "Double" type input to radius;
+    
+    double area = radius * radius * 3.14159;
+    
+    System.out.println(" The area is: " + radius + " is " + area);
+    //"println" prints the line and cursor moves to next line; cursor remain in the same line if using "print" method
