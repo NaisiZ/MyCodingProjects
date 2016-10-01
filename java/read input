@@ -15,3 +15,4 @@ public class readInput{
     
     System.out.println(" The area is: " + radius + " is " + area);
     //"println" prints the line and cursor moves to next line; cursor remain in the same line if using "print" method
+    //"println" = cout<< " "\n
