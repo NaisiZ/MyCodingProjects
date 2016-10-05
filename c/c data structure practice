@@ -1,0 +1,75 @@
+
+//
+//  main.c
+//  C practice lab
+//
+//  Created by Naisi Zhen on 10/4/16.
+//  Copyright © 2016 Naisi Zhen. All rights reserved.
+//
+
+struct Distance{
+    int feet;
+    float inch;
+}d1,d2,sum;
+
+typedef struct complex{
+    float real;
+    float imag;
+}complex;
+complex add(complex n1,complex n2);
+
+#include <stdio.h>
+int main(){
+    printf("Question 1:\n");
+    int var=5;
+    printf("Value: %d\n",var);
+    printf("Address: %d\n",&var);
+    
+    printf("Question 2:\n");
+    int* pc;
+    int c;
+    c=22;
+    printf("Address of c: %d\n", &c);
+    printf("Value of c: %d\n\n", c);
+    pc=&c;
+    printf("Address of pointer pc:%d\n",pc);
+    printf("Content of pointer pc:%d\n\n",*pc);
+    c=11;
+    printf("Address of pointer pc:%d\n",pc);
+    printf("Content of pointer pc:%d\n\n",*pc);
+    *pc=2;
+    printf("Address of c:%d\n",&c);
+    printf("Value of c:%d\n\n",c);
+    
+    printf("Question 3:\n");
+    printf("1st distance\n");
+    printf("Enter feet: ");
+    scanf("%d",&d1.feet);
+    printf("Enter inch: ");
+    scanf("%f",&d1.inch);
+    printf("2nd distance\n");
+    printf("Enter feet: ");
+    scanf("%d", &d2.feet);
+    printf("Enter inch: ");
+    scanf("%f",&d2.inch);
+    sum.feet=d1.feet+d2.feet;
+    sum.inch=d1.inch+d2.inch;
+    if(sum.inch>12)
+    {
+        ++sum.feet;
+        sum.inch=sum.inch-12;
+    }
+    printf("The sum of distance is %d\'-%.1f\"\n", sum.feet,sum.inch);
+    
+    complex n1,n2,temp;
+    printf("For 1st complex number \n");
+    printf("Enter real and imaginary respectively:\n");
+    scanf("%f%f",&n1.real,&n1.imag);
+    printf("\nFor 2nd complex number \n");
+    printf("Enter real and imaginary respectively:\n");
+    scanf("%f%f",&n2.real,&n2.imag);
+    temp=add(n1,n2);
+    printf("Sum=%.1f+%.1fi",temp.real,temp.imag);
+    
+    return 0;
+}
