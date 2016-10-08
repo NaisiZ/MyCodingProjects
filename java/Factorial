@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Quiz {
+	public static void main(String [] args)
+	{
+		System.out.println("Please enter a factorial: ");
+		Scanner input=new Scanner(System.in);
+		int number=input.nextInt();
+		int i,fact=1;  
+
+		  for(i=1;i<=number;i++){    
+		      fact=fact*i;    
+		  }    
+		  System.out.println("Factorial of "+number+" is: "+fact);    
+		  while(i<=number)
+		  {
+			  fact=fact*i;
+			  i++;
+		  }
+		  System.out.println("Using while loop: " + "Factorial of "+number+" with while loop"+" is: "+fact);    
+		  
+	  int j, fact2=1;  
+	  System.out.println("Please enter a factorial: ");
+		Scanner input2=new Scanner(System.in);
+		int number2=input.nextInt();
+	  for(j=1;j<=number2;j++){    
+	      fact2=fact2*j;    
+	  }    
+	  System.out.println("Factorial of "+number2+" is: "+fact2);   
+	  while(j<=number2)
+	  {
+		  fact=fact*j;
+		  i++;
+	  }
+	  
+	  System.out.println("Using while loop: " + "Factorial of "+number2+" is: "+fact2);    
+	  
+	  
+	  
+}
+}
+
