@@ -1,4 +1,4 @@
-package Exercise3;
+package Exercise2;
 
 public class TestCircle {
 
@@ -15,12 +15,11 @@ public class TestCircle {
 		System.out.println(c3.getColor());
 		Circle c4=new Circle();
 		c4.setRadius(5.0);          
-		c4.setColor("green");       
+		c4.setColor("green");           
 		System.out.println(c4.getRadius());
 		System.out.println(c4.getArea());
 		System.out.println(c4.getColor());
-		Circle c5= new Circle(5.0);
-		System.out.println(c5.toString());
+	
 	}
 
 }

@@ -1,37 +1,33 @@
-package Exercise3;
-
+package Exercise2;
 public class Circle { 
 	private double radius;
 	private String color;
 	public Circle() {
-	this.radius = 1.0;
-	this.color = "red";
+	radius = 1.0;
+	color = "red";
 	}
 	public Circle(double r) {
-	this.radius = r;
-	this.color = "red";
-	}
-	
-	public double getRadius() {
-	return radius;
+	radius = r;
+	color = "red";
 	}
 	public Circle(double r,String c){
-		this.radius = r;
-		this.color = c;
+		radius = r;
+		color = c;
+	}
+	public double getRadius() {
+	return radius;
 	}
 	public String getColor(){
 		return color;
 	}
-	public void setRadius(double r) {
-		this.radius = r;
-		}
-	public String toString() {
-		return "Circle: radius=" + radius + " color="+ color;
-		}
-		public void setColor(String c) {
-			this.color=c;
-		}
+	
 	public double getArea() {
 	return radius*radius*Math.PI;
 	}
-}
+	public void setRadius(double r) {
+		radius = r;
+		}
+		public void setColor(String c) {
+			color=c;
+		}
+	}
