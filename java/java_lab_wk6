@@ -1,0 +1,31 @@
+package hw6;
+
+public class Person {
+	String firstname;
+	String lastname;
+	int age;
+	Person(String f,String l,int a){
+		this.firstname=f;
+	    this.lastname=l;
+		this.age=a;
+	}
+
+
+	public static void main(String[] args)
+	{
+		Person p1= new Person("Naisi", "Zhen", 18);
+		Person p2= new Person("Xinxin", "Huang", 18);
+		Person p3= new Person("Lily","Li", 16);
+		Person p4= new Person("DingDing","Ding", 18);
+		Person p5= new Person("Qiang", "Bian", 18);
+		
+		Person[] pList ={p1,p2,p3,p4,p5};
+		
+		for(int i=0;i<5;i++)
+		{
+			System.out.println(
+					pList[i].firstname + " is " +pList[i].age);
+		}
+//		System.out.println(pList[0]);
+	}
+}
