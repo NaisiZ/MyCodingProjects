@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class question1{
-	
+	//homework3 (wk5)
 public static int average(int[] array) {
 	int sum = 0;
 	
