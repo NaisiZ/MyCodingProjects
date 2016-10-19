@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverseInt(int ID)
+{
+    int reversed=0;
+    while (ID!=0)
+    {
+        reversed=reversed*10;
+        reversed=reversed+ID%10;
+        ID=ID/10;
+    }
+    printf("Reverse of entered number is = %d\n", reversed);
+}
+
+    
+int main(){
+    int ID;
+    printf("Please enter ID number: \n");
+    scanf("%d",&ID);
+    reverseInt(ID);
+   
+    return 0;
+}
