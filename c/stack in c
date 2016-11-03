@@ -1,0 +1,24 @@
+#include<stdio.h>;
+
+int maxsize=8;
+int stack[maxsize];
+int top=0;
+
+int isEmpty(){
+  if (top==0)
+    return true;
+  else
+    return false;
+}
+
+int isFull()
+{
+  if (top==0)
+    return true;
+  else 
+    return false;
+}
+  
+void pop(){
+  int data;
+  if (isEmpty()!=0)
