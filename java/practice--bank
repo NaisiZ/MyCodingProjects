@@ -1,0 +1,175 @@
+TASK1
+
+
+package week11;
+
+
+public class Account {
+	double balance;
+	String type;
+	
+	public Account(){
+		this.balance=20000;
+	}
+	public void Deposit(int num){
+		this.balance+=num;
+	}
+	public void withdraw(int num){
+		if (this.balance>=num)
+			this.balance-=num;
+		else{
+			System.out.println("Balance is not enough");
+		}
+	}
+	public String  toString(){
+		System.out.println("Your Account Type:"+this.type+"\nYour Account Balance:"+ this.balance);
+		return type;
+	}
+}
+
+
+
+
+package week11;
+
+
+public class SavingsAccount extends Account{
+	public SavingsAccount(){
+		super();
+		this.type="Savings";
+	}
+	public void withdraw(int num){
+		if(this.balance>=num)
+			this.balance-=num;
+		else{
+			System.out.println("Balance is not enough");
+		}
+	}
+}
+
+
+package week11;
+import java.util.*;
+public class Test {
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		System.out.print("Your Account Type: ");
+		while(in.hasNext()){
+			String mm = in.nextLine();
+			if(mm.equals("savings")){
+				SavingsAccount a = new SavingsAccount();
+				while(mm.equals("savings")){
+					System.out.print("Choose one (1.Deposit 2.Withdraw 3.Account info 4.Exit); ");
+					int choose = in.nextInt();
+					switch(choose){
+					case 1:{System.out.print("Enter amount to deposit: ");
+					a.Deposit(in.nextInt());
+					break;
+					}
+					case 2:{System.out.print("Enter amount to withdraw: ");
+					a.withdraw(in.nextInt());
+					break;
+					}
+					case 3:{System.out.println(a);
+					break;
+					}
+					case 4:{mm="reset";
+					break;
+					}
+				}
+			}
+		}
+					else if(mm.equals("checkings")){
+						CheckingAccount a = new CheckingAccount();
+						while(mm.equals("checkings")){
+							System.out.print("Choose one (1.Deposit 2.Withdraw 3.Account info 4.Exit): ");
+							int choose = in.nextInt();
+							switch(choose){
+							case 1:{System.out.print("Enter amount to deposit: ");
+							a.Deposit(in.nextInt());
+							break;
+							}
+							case 2:{System.out.print("Enter aount to withdraw:" );
+							a.withdraw(in.nextInt());
+							break;
+							}
+							case 3:{System.out.println(a);
+							break;
+							}
+							case 4:{mm="reset";
+							break;
+							}
+						}
+					}
+				}
+			}
+				in.close();
+		}
+		
+		
+	}
+
+
+
+
+
+
+
+Task2:
+
+
+
+
+package week11;
+
+
+public class Animal {
+	Animal(){}
+}
+package week11;
+
+
+public class Cat extends Animal{
+	Cat(){
+	}
+	public String toString(){
+		return"Cat eats birds.";
+	}
+}
+package week11;
+
+
+public class dog extends Animal{
+	dog(){
+		
+	}
+	public String toString(){
+		return"Dog eats bone.";
+	}
+}
+package week11;
+
+
+public class Tiger {
+	Tiger(){
+		
+	}
+	public String toString(){
+		return"Tiger eats meat.";
+	}
+}
+package week11;
+
+
+public class Test2 {
+	public static void main(String[] args){
+		
+		dog b = new dog();
+		Tiger t = new Tiger();
+		Cat c = new Cat();
+		System.out.println(b);
+		System.out.println(t);
+		System.out.println(c);
+	}
+	
+}
