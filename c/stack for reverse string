@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#define max 100
+int top, stack[max];
+char revStr(char arr[], size_t first, size_t last)
+{
+    if( first < last )
+    {
+        char temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
+        
+        revStr(arr, ++first, --last);
+    }
+    return *arr;
+}
+char toLowerCase(char arr[])
+{
+    
+    int i=0;
+    while( arr[i] )
+    {
+        arr[i]=tolower(arr[i]);
+        i++;
+    }
+    return *arr;
+}
+
+void push(char x){
+    if(top==max-1)
+    {
+        printf("stack overflow");
+    }else{
+        stack[++top]=x;
+    }
+}
+void pop(char x){
+    printf("%c", stack[top--]);
+}
+
+int main()
+{
+    char name[30];
+    
+    printf("Enter your name: \n");
+    gets(name);
+    //reverse name with recursive function
+    toLowerCase(name);
+    printf("Reversed name is: \n%s",name);
+    revStr(name,0,11);
+    printf("\n\n\n\n");
+    //reverse name with stack
+    printf("Printing reversed name using stack: \n");
+    char name1[]="Naisi Zhen";
+    for(int i=0;i<=10;i++)
+    {
+        push(name1[i]);
+    }
+    for(int i=0;i<=10;i++)
+        pop(name1[i]);
+    printf("\n");
+}
