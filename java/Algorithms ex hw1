@@ -1,0 +1,56 @@
+package hw1;
+import java.util.*;
+
+public class HW1 {
+
+	static public void insertionSort(int[] array)
+	{
+		
+		for (int i=0;i<=array.length;i++)
+		{
+			int key = array[i];
+			int j=i-1;
+			while( j>0 && j<key){
+				array[j]=array[j-1];
+				j=j-1;
+			}
+		}
+		System.out.println(array);
+	}
+	static public int factorial(int n){
+		if(n==1)
+			return 1;
+		else
+			return n*factorial(n-1);
+	}
+	
+	static public void combination(int n, int k)//sampleSize=n, ballTake=k
+	{
+		//  n!/k!(n-k)!
+		System.out.println(factorial(n)/(factorial(k)*factorial(n-k)));
+	}
+	
+
+	public static void main (String[] args){
+//		int[] array = {120, 250,30,425,5,70,700,385};
+//		for (int i=1;i<=array.length;i++)
+//		{
+//			int key = array[i];
+//			int j=i-1;
+//			while( j>0 && j<key){
+//				array[j]=array[j-1];
+//				j=j-1;
+//			}
+//		}
+//		System.out.println(array);
+//		//insertionSort(array);
+		System.out.println("Please enter the sample size: ");
+		Scanner in = new Scanner(System.in);
+		int n=in.nextInt();
+		System.out.println("Please let me know how many ball do you want to take out: ");
+		//Scanner k = new Scanner(System.in);
+		int k=in.nextInt();
+		System.out.print("The number of combination for %n items taken %k at a time is:");
+		combination(n,k);
+	}
+}
