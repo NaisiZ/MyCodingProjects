@@ -6,16 +6,22 @@ public class HW1 {
 	static public void insertionSort(int[] array)
 	{
 		
-		for (int i=0;i<=array.length;i++)
+		for (int i=1;i<array.length;i++)
 		{
-			int key = array[i];
-			int j=i-1;
-			while( j>0 && j<key){
-				array[j]=array[j-1];
+			int key = array[i]; //i=2 key = 30
+			int j=i-1; //j=1
+			while( j>-1 && array[j]>key){ //j>0 arr[1]
+				array[j+1]=array[j];
 				j=j-1;
 			}
+			array[j+1]=key;
 		}
-		System.out.println(array);
+		System.out.print("Insertion Sort result is ");
+		for (int i = 0; i < array.length; i++) {
+			
+			System.out.print(array[i] + ", ");
+        }
+        System.out.println("\n");
 	}
 	static public int factorial(int n){
 		if(n==1)
@@ -27,30 +33,26 @@ public class HW1 {
 	static public void combination(int n, int k)//sampleSize=n, ballTake=k
 	{
 		//  n!/k!(n-k)!
-		System.out.println(factorial(n)/(factorial(k)*factorial(n-k)));
+		if (n<=k)
+			System.out.println("The sample size must be larger than the items taken!");
+		else
+			System.out.print("The number of combination for " + n + " items taken " + k + " at a time is: ");
+			System.out.println(factorial(n)/(factorial(k)*factorial(n-k)));
 	}
 	
 
 	public static void main (String[] args){
-//		int[] array = {120, 250,30,425,5,70,700,385};
-//		for (int i=1;i<=array.length;i++)
-//		{
-//			int key = array[i];
-//			int j=i-1;
-//			while( j>0 && j<key){
-//				array[j]=array[j-1];
-//				j=j-1;
-//			}
-//		}
-//		System.out.println(array);
-//		//insertionSort(array);
-		System.out.println("Please enter the sample size: ");
+		//Q4
+		int[] array = {120, 250,30,425,5,70,700,385};
+		insertionSort(array);
+		
+		//Q5
+		System.out.println("Please enter the item sample size: ");
 		Scanner in = new Scanner(System.in);
 		int n=in.nextInt();
-		System.out.println("Please let me know how many ball do you want to take out: ");
-		//Scanner k = new Scanner(System.in);
+		System.out.println("How many item do you want to take out: ");
 		int k=in.nextInt();
-		System.out.print("The number of combination for %n items taken %k at a time is:");
+		
 		combination(n,k);
 	}
 }
